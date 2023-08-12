@@ -61,3 +61,18 @@ g = { name: 'faha1999', age: 24, adult: false };
 //
 let h;
 h: [1, 2, 3];
+// Dynamic / Any Type variables //
+// ** Dynamic / Any Better not use in typescript ** //
+let i;
+i = 5;
+i = 'faha1999';
+// Dynamic / Any Type array //
+let j = [];
+j.push('bangladesh');
+j.push(24);
+// Dynamic / Any Type objects //
+let k;
+k: {
+    name: 'Bangladesh';
+    age: 45;
+}
