@@ -116,3 +116,20 @@ console.log(calculation(5, 6, 'minus'));
 // complex example
 let userDetailsList;
 userDetailsList = (id, user) => { };
+// working with classes //
+class Player {
+    constructor(n, a, c) {
+        this.name = n;
+        this.age = a;
+        this.country = c;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing`);
+    }
+}
+const Mashrafi = new Player('Mashrafi', 40, 'Bangladesh');
+const Sakib = new Player('Sakib', 35, 'Bangladesh');
+console.log(Mashrafi.name); // This is the wired part of Class. Cause we can access types from outside. As well as can edit. And this is the default behavior of Class.
+const players = [];
+players.push(Sakib);
+players.push(Mashrafi);

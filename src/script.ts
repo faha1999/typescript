@@ -199,3 +199,29 @@ userDetailsList = (
   id: number | String,
   user: { name: string; age: number }, // userInfo changed to user. It is possible but can't change the object.
 ) => {};
+
+// working with classes //
+class Player {
+  name: string;
+  age: number;
+  country: string;
+
+  constructor(n: string, a: number, c: string) {
+    this.name = n;
+    this.age = a;
+    this.country = c;
+  }
+
+  play() {
+    console.log(`${this.name} from ${this.country} is playing`);
+  }
+}
+
+const Mashrafi = new Player('Mashrafi', 40, 'Bangladesh');
+const Sakib = new Player('Sakib', 35, 'Bangladesh');
+
+console.log(Mashrafi.name); // This is the wired part of Class. Cause we can access types from outside. As well as can edit. And this is the default behavior of Class.
+const players: Player[] = [];
+
+players.push(Sakib);
+players.push(Mashrafi);
