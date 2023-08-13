@@ -97,3 +97,22 @@ const userDetails = (id, user) => {
 const sayHello = (user) => {
     console.log(`Hello ${user.age > 50 ? 'Sir' : 'Mr'} ${user.name}`);
 };
+// function signatures //
+let myFun; //myFunc
+let add;
+add = (a, b) => {
+    return a + b;
+};
+let calculation;
+calculation = (a, b, c) => {
+    if (c === 'add') {
+        return a + b;
+    }
+    else {
+        return a - b;
+    }
+};
+console.log(calculation(5, 6, 'minus'));
+// complex example
+let userDetailsList;
+userDetailsList = (id, user) => { };

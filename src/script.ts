@@ -163,3 +163,39 @@ const userDetails = (id: stringOrNum, user: userType) => {
 const sayHello = (user: userType) => {
   console.log(`Hello ${user.age > 50 ? 'Sir' : 'Mr'} ${user.name}`);
 };
+
+// function signatures //
+let myFun: () => void; //myFunc
+
+let add: (x: number, y: number) => number;
+
+add = (a: number, b: number) => {
+  return a + b;
+};
+
+let calculation: (x: number, y: number, z: string) => number;
+
+calculation = (a: number, b: number, c: string) => {
+  if (c === 'add') {
+    return a + b;
+  } else {
+    return a - b;
+  }
+};
+
+console.log(calculation(5, 6, 'minus'));
+
+// complex example
+
+let userDetailsList: (
+  id: number | string,
+  userInfo: {
+    name: string;
+    age: number;
+  },
+) => void;
+
+userDetailsList = (
+  id: number | String,
+  user: { name: string; age: number }, // userInfo changed to user. It is possible but can't change the object.
+) => {};
