@@ -76,3 +76,18 @@ k: {
     name: 'Bangladesh';
     age: 45;
 }
+// function type //
+let myFunc;
+myFunc = () => {
+    console.log('Hello!!');
+};
+// using parameter
+const myFunction = (a, b) => {
+    console.log(`Hello! ${a} ${b} `);
+};
+myFunction('wor', 'ld');
+// Function return
+const myFunctionReturn = (a, b) => {
+    return a + b;
+};
+myFunctionReturn('wor', 'ld');
