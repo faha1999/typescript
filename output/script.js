@@ -133,3 +133,33 @@ console.log(Mashrafi.name); // This is the wired part of Class. Cause we can acc
 const players = [];
 players.push(Sakib);
 players.push(Mashrafi);
+// Access Modifiers //
+// * By default all classes are public
+class PlayerClass {
+    // Below is elaborate version to understand
+    // private name: string;
+    // private age: number;
+    // readonly country: string; // this is like privet. But only we cant read it in console.
+    // constructor(n: string, a: number, c: string) {
+    //   this.name = n;
+    //   this.age = a;
+    //   this.country = c;
+    // }
+    // Short version is below
+    constructor(name, age, country) {
+        this.name = name;
+        this.age = age;
+        this.country = country;
+    }
+    play() {
+        console.log(`${this.name} from ${this.country} is playing`);
+    }
+}
+const Tamim = new PlayerClass('Tamim', 40, 'Bangladesh');
+const Redoy = new PlayerClass('Redoy', 35, 'Bangladesh');
+// console.log(Tamim.name); // Have to comment out to see. Cause we can't Access / Modify class types from outside.
+// Tamim.country = 'England'; // Have to comment out to see. Cause we can't access class types from outside.
+console.log(Tamim.country); // we can only Access class types from outside.
+const playersClass = [];
+playersClass.push(Tamim);
+playersClass.push(Redoy);
