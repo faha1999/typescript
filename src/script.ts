@@ -265,3 +265,16 @@ const playersClass: PlayerClass[] = [];
 
 playersClass.push(Tamim);
 playersClass.push(Redoy);
+
+// Module System //
+import { PlayerClasses } from './classes/Player.js';
+
+const Musfique = new PlayerClasses('Musfique', 40, 'Bangladesh');
+const Riead = new PlayerClasses('Riead', 35, 'Bangladesh');
+
+console.log(Musfique.country);
+console.log(Riead.age);
+const playersClassess: PlayerClasses[] = [];
+
+playersClassess.push(Musfique);
+playersClassess.push(Riead);
