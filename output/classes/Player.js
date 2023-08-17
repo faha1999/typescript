@@ -1,8 +1,12 @@
 export class PlayerClasses {
-    constructor(name, age, country) {
+    constructor(name, // interface can'r access private property.
+    age, country) {
         this.name = name;
         this.age = age;
         this.country = country;
+    }
+    getProperty() {
+        return this.age;
     }
     play() {
         console.log(`${this.name} from ${this.country} is playing`);

@@ -267,14 +267,50 @@ playersClass.push(Tamim);
 playersClass.push(Redoy);
 
 // Module System //
+// import { PlayerClasses } from './classes/Player.js';
+
+// const Musfique = new PlayerClasses('Musfique', 40, 'Bangladesh');
+// const Riead = new PlayerClasses('Riead', 35, 'Bangladesh');
+
+// console.log(Musfique.country);
+// console.log(Riead.age);
+// const playersClassess: PlayerClasses[] = [];
+
+// playersClassess.push(Musfique);
+// playersClassess.push(Riead);
+
+// Interfaces //
+
+// * object interfaces
+interface RectangleOptions {
+  width: number;
+  length: number;
+}
+
+function drawRectangle(options: RectangleOptions) {
+  let width = options.width;
+  let length = options.length;
+}
+
+let threeDdOptions = {
+  width: 30,
+  length: 20,
+  height: 10,
+};
+
+drawRectangle(threeDdOptions);
+
+// * class interface
 import { PlayerClasses } from './classes/Player.js';
+import { isPlayer } from './interfaces/IsPlayer.js';
 
 const Musfique = new PlayerClasses('Musfique', 40, 'Bangladesh');
-const Riead = new PlayerClasses('Riead', 35, 'Bangladesh');
+let Riead: isPlayer;
+
+Riead = new PlayerClasses('Riead', 35, 'Bangladesh');
 
 console.log(Musfique.country);
-console.log(Riead.age);
-const playersClassess: PlayerClasses[] = [];
+const playersClassess: isPlayer[] = [];
 
 playersClassess.push(Musfique);
 playersClassess.push(Riead);

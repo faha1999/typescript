@@ -162,12 +162,22 @@ console.log(Tamim.country); // we can only Access class types from outside.
 const playersClass = [];
 playersClass.push(Tamim);
 playersClass.push(Redoy);
-// Module System //
+function drawRectangle(options) {
+    let width = options.width;
+    let length = options.length;
+}
+let threeDdOptions = {
+    width: 30,
+    length: 20,
+    height: 10,
+};
+drawRectangle(threeDdOptions);
+// * class interface
 import { PlayerClasses } from './classes/Player.js';
 const Musfique = new PlayerClasses('Musfique', 40, 'Bangladesh');
-const Riead = new PlayerClasses('Riead', 35, 'Bangladesh');
+let Riead;
+Riead = new PlayerClasses('Riead', 35, 'Bangladesh');
 console.log(Musfique.country);
-console.log(Riead.age);
 const playersClassess = [];
 playersClassess.push(Musfique);
 playersClassess.push(Riead);
