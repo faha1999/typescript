@@ -314,3 +314,42 @@ const playersClassess: isPlayer[] = [];
 
 playersClassess.push(Musfique);
 playersClassess.push(Riead);
+
+// Generics //
+
+const addId = <T extends { name: string; age: number }>(obj: T) => {
+  let id = Math.floor(Math.random() * 100);
+
+  return { ...obj, id };
+};
+
+let user = addId({
+  name: 'Mashrafi',
+  age: 40,
+  country: 'Bangladesh',
+});
+
+addId(user);
+
+// Generics in Interface
+interface APIResponse<T> {
+  // Generally developers use <T> here to receive data. But we can use anything instead of <T>
+  status: number;
+  type: string;
+  data: T;
+}
+
+const response1: APIResponse<object> = {
+  status: 200,
+  type: 'Good',
+  data: {
+    name: 'Test',
+    something: 300,
+  },
+};
+
+const response2: APIResponse<string> = {
+  status: 200,
+  type: 'Good',
+  data: 'Test',
+};

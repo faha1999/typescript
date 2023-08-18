@@ -181,3 +181,27 @@ console.log(Musfique.country);
 const playersClassess = [];
 playersClassess.push(Musfique);
 playersClassess.push(Riead);
+// Generics //
+const addId = (obj) => {
+    let id = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { id });
+};
+let user = addId({
+    name: 'Mashrafi',
+    age: 40,
+    country: 'Bangladesh',
+});
+addId(user);
+const response1 = {
+    status: 200,
+    type: 'Good',
+    data: {
+        name: 'Test',
+        something: 300,
+    },
+};
+const response2 = {
+    status: 200,
+    type: 'Good',
+    data: 'Test',
+};
