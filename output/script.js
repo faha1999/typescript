@@ -205,3 +205,17 @@ const response2 = {
     type: 'Good',
     data: 'Test',
 };
+// ENUM Types
+var ResponseType;
+(function (ResponseType) {
+    ResponseType[ResponseType["SUCCESS"] = 0] = "SUCCESS";
+    ResponseType[ResponseType["FAILURE"] = 1] = "FAILURE";
+    ResponseType[ResponseType["UNAUTHENTICATED"] = 2] = "UNAUTHENTICATED";
+    ResponseType[ResponseType["FORBIDDEN"] = 3] = "FORBIDDEN";
+})(ResponseType || (ResponseType = {}));
+const response4 = {
+    status: 200,
+    type: ResponseType.SUCCESS,
+    data: 'Test',
+};
+console.log(response4);

@@ -353,3 +353,25 @@ const response2: APIResponse<string> = {
   type: 'Good',
   data: 'Test',
 };
+
+// ENUM Types
+enum ResponseType {
+  SUCCESS,
+  FAILURE,
+  UNAUTHENTICATED,
+  FORBIDDEN,
+}
+
+interface APIResponses<T> {
+  status: number;
+  type: ResponseType;
+  data: T;
+}
+
+const response4: APIResponses<string> = {
+  status: 200,
+  type: ResponseType.SUCCESS,
+  data: 'Test',
+};
+
+console.log(response4);
