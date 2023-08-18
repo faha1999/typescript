@@ -375,3 +375,18 @@ const response4: APIResponses<string> = {
 };
 
 console.log(response4);
+
+// Working with Tuples //
+// look like array but have to follow the order (type)
+
+// * We can't push anything in this array *
+
+let tuples = [3, 'Hello', { p: 3 }]; // this is a STRING, NUMBER & OBJECT array.
+
+tuples[0] = 5; // here position doesn't matter. We can add "STRING, NUMBER & OBJECT" in any position.
+// tuples[0] = false; // we can't add boolean in this array. AND this is the order we've to follow MUST.
+
+let tuplesWithOrder: [number, string, object] = [4, 'world', { t: 1 }];
+
+// tuplesWithOrder[1] = 4; // Here in 2nd position is "STRING", so we can't put number.
+tuplesWithOrder[1] = ' Hello'; // It work now
